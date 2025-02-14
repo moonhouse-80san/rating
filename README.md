@@ -22,7 +22,7 @@
 
 며칠을 고민하고 A.I들에게 물어봐도 정답이 없네 으으으~
 
-![image](https://github.com/user-attachments/assets/ace877ec-ad5c-4fc2-9b6a-d3f23eb98f3b)
+![image](https://github.com/user-attachments/assets/dc923e11-2dc8-4bc9-b3c1-4b9399f2b7b2)
 
 ![image](https://github.com/user-attachments/assets/59f09f96-70b1-4652-8b62-2a0f1568d0d8)
 
