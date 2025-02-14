@@ -30,9 +30,7 @@
 
 테스트 사이트 : https://moonhouse.co.kr/book
 
-Github 주소 https://github.com/moonhouse-80san/rating
 
- 
 
 증상 :
 
