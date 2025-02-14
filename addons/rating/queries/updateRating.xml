@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="addons.rating.updateRating" action="update">
+	<tables>
+		<table name="rating" />
+	</tables>
+	<sets>
+		<set column="rating" var="rating" />
+		<set column="regdate" default="curdate()" />
+	</sets>
+	<conditions>
+		<condition operation="equal" column="document_srl" var="document_srl" />
+		<condition operation="equal" column="member_srl" var="member_srl" pipe="AND" />
+	</conditions>
+</query>

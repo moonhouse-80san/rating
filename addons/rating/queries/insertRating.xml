@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query id="addons.rating.insertRating" action="insert">
+	<tables>
+		<table name="rating" />
+	</tables>
+	<columns>
+		<column name="document_srl" var="document_srl" />
+		<column name="member_srl" var="member_srl" />
+		<column name="rating" var="rating" />
+		<column name="regdate" default="curdate()" />
+	</columns>
+</query>

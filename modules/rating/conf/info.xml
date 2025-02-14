@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title>게시글 평점 모듈</title>
+	<description>게시글에 로그인한 사용자가 평점을 부여할 수 있도록 하는 모듈</description>
+	<version>1.0</version>
+	<date>2025-02-12</date>
+	<author email_address="80san@moonhouse.co.kr" link="https://moonhouse.co.kr/">
+		<name>80san</name>
+	</author>
+</module>
