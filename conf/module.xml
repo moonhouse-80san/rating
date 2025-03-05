@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <grants />
+    <actions>
+        <!-- 사용자 액션 -->
+        <action name="dispRatingWidget" type="view" standalone="true" />
+        <action name="procRatingSubmit" type="controller" standalone="true" />
+        
+        <!-- 관리자 액션 -->
+        <action name="dispRatingAdminIndex" type="view" admin_index="true" standalone="true" menu_name="rating" />
+        <action name="dispRatingAdminList" type="view" standalone="true" menu_name="rating" />
+        <action name="procRatingAdminInsertConfig" type="controller" standalone="true" />
+        <action name="procRatingAdminDeleteRating" type="controller" standalone="true" />
+    </actions>
+    <menus>
+        <menu name="rating">
+            <title xml:lang="ko">평점 모듈</title>
+        </menu>
+    </menus>
+</module>

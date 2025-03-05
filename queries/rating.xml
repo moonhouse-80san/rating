@@ -1,0 +1,79 @@
+<queries>
+    <query id="insertRating" action="insert">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <columns>
+            <column name="rating_srl" var="rating_srl" filter="number" notnull="notnull" />
+            <column name="document_srl" var="document_srl" filter="number" notnull="notnull" />
+            <column name="member_srl" var="member_srl" filter="number" notnull="notnull" />
+            <column name="rating" var="rating" filter="number" notnull="notnull" />
+            <column name="regdate" var="regdate" default="curdate()" />
+        </columns>
+    </query>
+    
+    <query id="getRatingByMember" action="select">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <columns>
+            <column name="*" />
+        </columns>
+        <conditions>
+            <condition operation="equal" column="document_srl" var="document_srl" filter="number" notnull="notnull" />
+            <condition operation="equal" column="member_srl" var="member_srl" filter="number" notnull="notnull" />
+        </conditions>
+    </query>
+    
+    <query id="getDocumentRatingAverage" action="select">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <columns>
+            <column name="AVG(rating)" alias="avg" />
+            <column name="COUNT(*)" alias="count" />
+        </columns>
+        <conditions>
+            <condition operation="equal" column="document_srl" var="document_srl" filter="number" notnull="notnull" />
+        </conditions>
+    </query>
+    
+    <query id="getDocumentRatingList" action="select">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <columns>
+            <column name="*" />
+        </columns>
+        <conditions>
+            <condition operation="equal" column="document_srl" var="document_srl" filter="number" notnull="notnull" />
+        </conditions>
+        <navigation>
+            <index var="sort_index" default="regdate" order="desc" />
+        </navigation>
+    </query>
+    
+    <query id="getRatingList" action="select">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <columns>
+            <column name="*" />
+        </columns>
+        <navigation>
+            <index var="sort_index" default="regdate" order="desc" />
+            <list_count var="list_count" default="20" />
+            <page_count var="page_count" default="10" />
+            <page var="page" default="1" />
+        </navigation>
+    </query>
+    
+    <query id="deleteRating" action="delete">
+        <tables>
+            <table name="rating" />
+        </tables>
+        <conditions>
+            <condition operation="equal" column="rating_srl" var="rating_srl" filter="number" notnull="notnull" />
+        </conditions>
+    </query>
+</queries>

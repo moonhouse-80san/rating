@@ -1,0 +1,48 @@
+<load target="rating.css" />
+
+<div class="rating-widget">
+    <div class="rating-title">이 글의 평점 ({$rating_count} 참여)</div>
+    
+    <div class="rating-average">
+        <div class="label">평균 평점:</div>
+        <div class="stars">
+            <!--@for($i=1;$i<=10;$i++)-->
+            <span class="star {$rating_avg >= $i ? 'filled' : 'empty'}">★</span>
+            <!--@end-->
+            <span class="score">{number_format($rating_avg, 1)}</span>
+        </div>
+    </div>
+    
+    <!--@if($is_logged && !$already_rated)-->
+    <div class="rating-form">
+        <form action="{getUrl('')}" method="post">
+            <input type="hidden" name="module" value="rating" />
+            <input type="hidden" name="act" value="procRatingSubmit" />
+            <input type="hidden" name="document_srl" value="{$document_srl}" />
+            
+            <div class="my-rating">
+                <div class="label">내 평점:</div>
+                <div class="stars">
+                    <!--@for($i=1;$i<=10;$i++)-->
+                    <label>
+                        <input type="radio" name="rating" value="{$i}" />
+                        <span class="star">★</span>
+                    </label>
+                    <!--@end-->
+                </div>
+            </div>
+            
+            <div class="submit-button">
+                <button type="submit">평가하기</button>
+            </div>
+        </form>
+    </div>
+    <!--@else-->
+    <!--@if($already_rated)-->
+    <div class="already-rated">이미 평가하셨습니다.</div>
+    <!--@end-->
+    <!--@if(!$is_logged)-->
+    <div class="login-required">로그인 후 평가하실 수 있습니다.</div>
+    <!--@end-->
+    <!--@end-->
+</div>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table name="xe_rating">
+<table name="rating">
 	<column name="rating_srl" type="number" size="11" notnull="notnull" primary_key="primary_key" auto_increment="auto_increment" />
 	<column name="document_srl" type="number" size="11" notnull="notnull" index="idx_document_srl" />
 	<column name="member_srl" type="number" size="11" notnull="notnull" index="idx_member_srl" />
-	<column name="rating" type="number" size="1" notnull="notnull" />
+	<column name="rating" type="number" size="11" notnull="notnull" />
 	<column name="regdate" type="date" notnull="notnull" />
 </table>

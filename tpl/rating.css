@@ -1,0 +1,78 @@
+/* rating.css */
+.rating-widget {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.rating-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating-average, .my-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.star.filled, input[type="radio"]:checked + .star {
+    color: #ffcc00;
+}
+
+.my-rating label {
+    margin: 0;
+    padding: 0;
+}
+
+.my-rating input[type="radio"] {
+    display: none;
+}
+
+.score {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.submit-button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.submit-button button {
+    padding: 5px 15px;
+    background-color: #4a86e8;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.submit-button button:hover {
+    background-color: #3d76c9;
+}
+
+.already-rated, .login-required {
+    color: #888;
+    font-style: italic;
+    margin-top: 10px;
+}
